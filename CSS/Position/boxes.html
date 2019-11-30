@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parentDiv {
+            min-height: 500px;
+            top: 50px;
+            position: relative;
+            background-color: yellow;
+            max-width: 500px;
+        }
+
+        #firstDiv {
+            border-radius: 50%;
+            z-index: 1;
+            position: absolute;
+            top: 60px;
+            left: 130px;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #secDiv {
+            border-radius: 50%;
+            z-index: 2;
+            position: absolute;
+            top: 174px;
+            left: 28px;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Position In CSS</h1>
+    <div id="parentDiv">
+        <div id="firstDiv"></div>
+        <div id="secDiv"></div>
+    </div>
+</body>
+
+</html>

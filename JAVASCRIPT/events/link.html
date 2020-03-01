@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>
+    A good website is a responsive website. The user does something—clicks a button,
+    moves the mouse, presses a key—and something happens. JavaScript gives you many ways to
+    respond to the user's needs. A few examples:
+    The user clicks a button saying "Our Guarantee" and an alert displays spelling out the
+    guarantee.
+    A page displays a "before" picture of a model. When the user mouses over the picture, it
+    is replaced by an "after" picture of her.
+    The user types a number in the Ounces field on a form. When she clicks in the Grams
+    field, the equivalent in grams displays.
+    The user has entered her email address in a form, and is about to type a comment. When
+    she moves the cursor from the email field to the comment field, JavaScript checks to see if the
+    email address is valid. In this case, it isn't—she's omitted ".com" at the end of the address. A
+    message displays letting her know that she's entered an invalid email address.
+    On an online shopping site, there's a picture of a black watch. Next to it is a drop-down
+    list asking the user to choose a color. When she chooses, the color of the watch in the picture
+    changes to that color.
+    All of these user actions—clicking a button, moving the mouse, moving from one field to
+    another in a form, selecting a different option—are known as events. JavaScript code that
+    responds to an event—for example, displaying a guarantee or swapping an image when the
+    pointer hovers over it—is called an event handler.
+    In this chapter and the ones that immediately follow, you'll learn the oldest and most
+    straightforward approach to event-handling—inline event-handling. When you're writing
+    production code, this is not the best way to handle events, for the same reason that inline CSS
+    styling isn't the best way to format HTML elements. But since it's the least abstract way to do
+    it, it's the easiest to learn, and can serve as a stepping stone to more advanced methods. Later
+    in the book, you'll learn the approach that's preferred by most professionals—the scripting
+    approach.
+    Inline event-handling means that you combine bits of JavaScript with HTML markup.
+    Here's a line that displays a link and then displays an alert when the user clicks it.
+    <a href="#" onClick="alert('Hi');">Click</a>
+    As an HTML coder, you're familiar with the beginning and end of this markup, <a href=and>Click</a>
+    But when the user clicks this link, it behaves differently than normal hyperlinks. Instead of
+    taking the user to another page, or to a named anchor on the same page, it displays an alert
+    saying "Hi".
+    145
+    When the user clicks the link, it goes nowhere, and instead executes a JavaScript
+    statement, in this case calling a function.
+    Let's break it down.
+    When the user clicks the link, you don't want a new webpage to be loaded in this case, so,
+    instead of a URL, you place a # inside the quotation marks. This tells the browser to
+    reload the current page.
+    onClick= says, "When the button is clicked, execute the following JavaScript." onClick
+    isn't case-sensitive. You could write onclick, ONCLICK, or OnClIcK and it would work.
+    But the convention is onClick, so we'll stick with that.
+    A JavaScript statement (or more than one), enclosed in quotes, follows. When the user
+    clicks the link, it executes.
+    One more thing to notice: onClick="alert('Hi');" The message inside the parens is
+    surrounded by single quotes, not the double quotes we've been using for an alert string. In
+    JavaScript code, you aren't allowed to nest double quotes within double quotes or single
+    quotes within single quotess. Since the entire JavaScript statement is enclosed in double
+    quotes, you have to enclose the alert message in single quotes.
+    But there's a problem with the markup above. <a href="#" tells the browser to reload the page. This means that if
+      the user has scrolled down to the link, the click, in addition to running the JavaScript code, will scroll the
+      page back to the top—an action you don't normally want. I've included this flawed approach, using <a href="#" ,
+      because you'll run into here and there in other people's work, but you'll probably prefer this approach: <a
+      href="JavaScript:void(0)" onClick="alert('Hi');">Click</a>
+    Now you've got exactly what you want. Nothing at all happens except for the JavaScript
+    that executes.
+    In the example above, the click executes only a single JavaScript statement. But there is
+    no limit to the number of JavaScript statements that you can enclose in the quotation marks. No
+    limit, that is, except for common sense. As you'll see, there are better ways to trigger
+    JavaScript than packing multiple statements into an online onClick event. But let me show you
+    the principle, with this example. When the user clicks, a first statement assigns 'hi' to a
+    variable and a second statement displays an alert specifying the variable as the message.
+    <a href="JavaScript:void(0)" onClick="var greet=" hi'; alert(greet);">Click</a>
+    As I've said, coding professionals frown on inline JavaScript. But if you do use this
+    approach, it's more craftsmanlike to call a function.
+    Here's a function.
+  </p>
+  <a href="Javascript:void(0)" onclick="alert('called !')"> Mujhe Dabao !</a>
+  <input type="button" value="Click" onClick="alert('phr se ! :)');">
+</body>
+
+</html>

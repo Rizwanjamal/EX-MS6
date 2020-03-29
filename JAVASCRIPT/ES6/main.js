@@ -3,7 +3,7 @@ function abc () {
   console.log('name :', name)
   {
     let name = 'salman'
-    console.log('name :', name)  
+    console.log('name :', name)
   }
   console.log('name :', name)  
 }
@@ -75,4 +75,39 @@ console.log('model :', model)
 carNames = ['Mira', 'Cultus', 'Honda']
 let [first, second, third] = carNames
 console.log('second :', second)
+
+
+// Spread Operator //
+
+///Copy///
+let a = [1,2,3]
+// let b = a
+
+// b.push(4) // b = [1,2,3,4] 
+// console.log(a) // a = [1,2,3,4]
+
+let b = [...a] // b = [1,2,3]
+b.push(4) // b = [1,2,3,4]
+
+///concat///
+let a = [1,2,3]
+let b = [4,5,6]
+// let c = a.concat(b) // c = [1,2,3,4,5,6]
+
+let c = [...a, ...b] // c = [1,2,3,4,5,6]
+
+///expand///
+let a = [1,2,3,4]
+let b = [...a, 5,6] // b = [1,2,3,4,5,6]
+
+
+
+
+
+
+
+
+
+
+
 
